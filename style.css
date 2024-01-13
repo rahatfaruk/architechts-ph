@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+
+:root {
+  --clr-dark: #131313;
+  --clr-dark-50: #727272;
+  --clr-dark-75: #424242;
+  --clr-primary: #FF900E;
+}
+/* base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {font-family: 'Work Sans', sans-serif;}
+button:hover {cursor: pointer; opacity: .75;}
+img {max-width: 100%;}
+a:hover {opacity: .75;}
+
+/* ## utilities */
+.container {
+  max-width: 1140px;
+  padding: 0 1rem;
+  margin: auto;
+}
+.p {
+  color: var(--clr-dark-50);
+  line-height: 1.4;
+  margin-bottom: .5rem;
+}
+.btn-primary {
+  font-size: 1rem;
+  padding: .5rem .75rem;
+  border: none;
+  border-radius: .25rem;
+  background: var(--clr-primary);
+}
+
+header {
+  background: rgba(255, 144, 14, 0.10);
+}
+/* ## main-navigation */
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 2rem 1rem 1rem;
+}
+.main-nav ul {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+.main-nav a {
+  color: var(--clr-dark-75);
+  text-decoration: none;
+}
+
+/* ## banner-sect */
+.banner-sect {
+  padding: 1rem;
+}
+.banner-sect .content {
+  max-width: 500px;
+  margin: 0 auto 1.5rem;
+  text-align: center;
+}
+.banner-sect .content h2 {
+  font-size: 2.5rem;
+  margin-bottom: .5rem;
+}
+
+@media screen and (max-width: 576px) {
+  .main-nav {
+    flex-direction: column;
+    align-items: center;
+  }
+  .banner-sect .content h2 {
+    font-size: 2rem;
+  }
+}
