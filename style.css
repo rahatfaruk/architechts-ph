@@ -26,7 +26,7 @@ a:hover {opacity: .75;}
 .p {
   color: var(--clr-dark-50);
   line-height: 1.4;
-  margin-bottom: .5rem;
+  margin-bottom: 1rem;
 }
 .btn-primary {
   font-size: 1rem;
@@ -34,6 +34,11 @@ a:hover {opacity: .75;}
   border: none;
   border-radius: .25rem;
   background: var(--clr-primary);
+  color: white;
+}
+.heading {
+  font-size: 2rem;
+  margin-bottom: .5rem;
 }
 
 header {
@@ -70,6 +75,71 @@ header {
   margin-bottom: .5rem;
 }
 
+/* ## .feature-sect */
+.feature-sect {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+.feature-sect .subsect-1 {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+.feature-sect .subsect-1 .img-grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+.feature-sect .subsect-1 .content {
+  flex: 1;
+}
+.feature-sect .subsect-1 .heading span:first-child {
+  color: var(--clr-dark-50);
+  font-weight: normal;
+} 
+.feature-sect .subsect-1 .heading span:last-child {
+  color: var(--clr-primary);
+}
+.feature-sect .subsect-2 {
+  display: flex;
+  gap: 2rem;
+}
+.feature-sect .subsect-2 .content {flex: 1;}
+.feature-sect .subsect-2 .content .card {
+  padding: 1rem;
+  border-radius: .5rem;
+  box-shadow: 0 3px 9px rgba(0,0,0,.25);
+  margin-bottom: 1rem;
+}
+.feature-sect .subsect-2 .content .card .p {
+  margin-bottom: 0;
+  margin-top: .5rem;
+}
+.feature-sect .subsect-2 .img-container {
+  flex: 1;
+  position: relative;
+}
+.feature-sect .subsect-2 .img-container img {
+  height: 100%;
+  object-fit: cover;
+}
+.feature-sect .subsect-2 .img-container p {
+  position: absolute;
+  left: -20px;
+  bottom: -20px;
+  padding: 1rem;
+  background: var(--clr-primary);
+  color: white;
+  border-radius: .5rem;
+  text-align: center;
+}
+.feature-sect .subsect-2 .img-container p span {
+  display: block;
+  font-size: 1.5rem;
+}
+
 @media screen and (max-width: 576px) {
   .main-nav {
     flex-direction: column;
@@ -78,4 +148,13 @@ header {
   .banner-sect .content h2 {
     font-size: 2rem;
   }
+  .feature-sect .subsect-1,
+  .feature-sect .subsect-2 {
+    flex-direction: column;
+  }
+  .feature-sect .subsect-2 .img-container p {
+    bottom: 0;
+    left: 0;
+  }
+
 }
